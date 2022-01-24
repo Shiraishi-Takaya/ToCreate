@@ -7,9 +7,9 @@
         <input type="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
         <div class="checkbox mb-3">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="remember-me"> ログイン状態を保存する
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
+        <button class="btn btn-lg btn-primary col-12" type="submit">ログイン</button>
       </form>
 </x-layout>
