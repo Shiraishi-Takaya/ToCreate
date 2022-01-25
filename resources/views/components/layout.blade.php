@@ -9,8 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
 </head>
-<body class="container d-flex flex-column">
-    <header class="d-flex justify-content-between align-items-center fixed-top px-5 pt-3 text-primary">
+<body class="d-flex flex-column">
+    {{-- ヘッダー --}}
+    <header class="d-flex justify-content-between align-items-center vw-100 px-5 pt-3 text-primary">
         <h1 class="m-0">ToCreate</h1>
         <ul class="nav d-flex align-items-center">
             <li class="nav-item">
@@ -24,10 +25,12 @@
         </ul>
     </header>
 
+    {{-- メイン --}}
     <main class="mt-auto">
         {{ $slot }}
     </main>
 
+    {{-- フッター --}}
     <footer class="mt-auto">
         <p class="text-center">©ToCreate.com</p>
     </footer>

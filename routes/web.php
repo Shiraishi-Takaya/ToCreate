@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/signup', function () {
     return view('auth.signup');
 }) -> name('auth.signup');
+
+Route::get('/settings', function () {
+    return view('auth.settings');
+}) -> name('auth.settings');
