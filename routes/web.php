@@ -24,3 +24,7 @@ Route::get('/signup', function () {
 Route::get('/settings', function () {
     return view('auth.settings');
 }) -> name('auth.settings');
+
+Route::get('/list', function () {
+    return view('index');
+}) -> name('index');

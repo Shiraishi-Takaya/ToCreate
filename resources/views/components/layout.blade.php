@@ -11,7 +11,7 @@
 </head>
 <body class="d-flex flex-column">
     {{-- ヘッダー --}}
-    <header class="d-flex justify-content-between align-items-center vw-100 px-5 pt-3 text-primary">
+    <header class="d-flex justify-content-between align-items-center vw-100 mb-auto px-5 pt-3 text-primary">
         <h1 class="m-0">ToCreate</h1>
         <ul class="nav d-flex align-items-center">
             <li class="nav-item">
@@ -26,13 +26,13 @@
     </header>
 
     {{-- メイン --}}
-    <main class="mt-auto">
+    <main>
         {{ $slot }}
     </main>
 
     {{-- フッター --}}
     <footer class="mt-auto">
-        <p class="text-center">©ToCreate.com</p>
+        <p class="text-center">&copy;ToCreate.com</p>
     </footer>
 </body>
 </html>
