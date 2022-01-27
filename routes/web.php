@@ -28,3 +28,7 @@ Route::get('/settings', function () {
 Route::get('/list', function () {
     return view('index');
 }) -> name('index');
+
+Route::get('/work', function () {
+    return view('work');
+}) -> name('work');

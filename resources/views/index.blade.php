@@ -4,7 +4,7 @@
 
     <section class="container">
 
-        <div class="work-item border border-2 border-primary rounded my-5 p-3 shadow">
+        <div class="work-item border border-2 border-primary rounded mb-5 p-3 shadow">
             <div class="work-title mb-2">
                 <h2>
                     <a href="" class="text-decoration-none">作品名</a>
@@ -49,9 +49,8 @@
         </div>
 
         <div class="work-add">
-            <button class="btn-lg btn-primary col-12">作品を追加する&nbsp;＋</button>
+            <button class="btn btn-lg btn-primary col-12">作品を追加する&nbsp;＋</button>
         </div>
 
     </section>
-
 </x-layout>
