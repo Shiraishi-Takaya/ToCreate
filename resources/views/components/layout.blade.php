@@ -11,7 +11,7 @@
 </head>
 <body class="d-flex flex-column">
     {{-- ヘッダー --}}
-    <header class="d-flex justify-content-between align-items-center vw-100 mb-auto px-5 pt-3 text-primary">
+    <header class="d-flex justify-content-between align-items-center w-100 mb-auto px-5 pt-3 text-primary">
         <h1 class="m-0">ToCreate</h1>
         <ul class="nav d-flex align-items-center">
             <li class="nav-item">

@@ -1,5 +1,6 @@
-.container {
+.work-container {
     max-width: 880px;
+    min-height: calc(100vh - 210px);
 }
 
 .functions-container {

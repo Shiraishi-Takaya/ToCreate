@@ -2,7 +2,7 @@
     <x-slot name="title">ToCreate</x-slot>
     <x-slot name="style">{{ url('css/work.css') }}</x-slot>
 
-    <section class="container">
+    <section class="container work-container my-5">
 
         <div class="work-title-container mb-4">
             <div class="work-title d-flex justify-content-between mb-2">
