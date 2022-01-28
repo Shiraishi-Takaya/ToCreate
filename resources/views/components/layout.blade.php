@@ -34,5 +34,7 @@
     <footer class="mt-auto">
         <p class="text-center">&copy;ToCreate.com</p>
     </footer>
+
+    <script src="{{ $script }}"></script>
 </body>
 </html>

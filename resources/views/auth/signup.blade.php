@@ -56,4 +56,6 @@
             </a>
         </div>
     </div>
+
+    <x-slot name="script"></x-slot>
 </x-layout>

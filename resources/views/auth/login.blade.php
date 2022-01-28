@@ -17,4 +17,6 @@
         {{-- ログインボタン --}}
         <button class="btn btn-lg btn-primary col-12" type="submit">ログイン</button>
     </form>
+
+    <x-slot name="script"></x-slot>
 </x-layout>

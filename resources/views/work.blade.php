@@ -6,7 +6,7 @@
 
         <div class="work-title-container mb-4">
             <div class="work-title d-flex justify-content-between mb-2">
-                <h1 class="text-primary">作品名</h1>
+                <h1 class="text-primary">(作品名)</h1>
                 <div class="work-title-btn">
                     <button class="btn btn-outline-primary">編集</button>
                     <button class="btn btn-outline-danger ms-2">削除</button>
@@ -44,4 +44,6 @@
         </div>
 
     </section>
+
+    <x-slot name="script"></x-slot>
 </x-layout>
