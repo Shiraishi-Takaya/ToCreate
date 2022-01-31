@@ -32,3 +32,7 @@ Route::get('/list', function () {
 Route::get('/work', function () {
     return view('work');
 }) -> name('work');
+
+Route::get('/function', function () {
+    return view('function');
+}) -> name('function');
