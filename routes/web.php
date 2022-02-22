@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\WorkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +27,11 @@ Route::get('/settings', function () {
     return view('auth.settings');
 }) -> name('auth.settings');
 
-Route::get('/list', function () {
-    return view('index');
-}) -> name('index');
+Route::get('/list', [IndexController::class, 'index'])
+    -> name('index');
 
-Route::get('/work', function () {
-    return view('work');
-}) -> name('work');
+Route::get('/work/{work}', [WorkController::class, 'work'])
+    -> name('work');
 
 Route::get('/function', function () {
     return view('function');

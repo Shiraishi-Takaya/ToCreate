@@ -6,7 +6,7 @@
 
         <div class="work-title-container mb-4">
             <div class="work-title d-flex justify-content-between mb-2">
-                <h1 class="text-primary">(作品名)</h1>
+                <h1 class="text-primary">{{ $work->name }}</h1>
                 <div class="work-title-btn">
                     <button class="btn btn-outline-primary">編集</button>
                     <button class="btn btn-outline-danger ms-2">削除</button>
@@ -20,8 +20,9 @@
         <div class="container functions-container">
             <h4 class="text-primary">機能&nbsp;:&nbsp;</h4>
 
+            @foreach ($work->features as $feature)
             <div class="function-item d-flex justify-content-between border border-2 border-primary rounded mb-5 px-4 py-3 shadow">
-                <h4>(機能名)</h4>
+                <h4>{{ $feature->name }}</h4>
                 <div class="completed_tasks">
                     <div class="mb-2">
                         完了した学習タスク
@@ -37,6 +38,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
 
             <div class="function-add">
                 <button class="btn btn-lg btn-primary col-12">機能を追加する&nbsp;＋</button>
