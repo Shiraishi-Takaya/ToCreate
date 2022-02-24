@@ -16,24 +16,12 @@ use App\Http\Controllers\FeatureController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
-
-Route::get('/signup', function () {
-    return view('auth.signup');
-}) -> name('auth.signup');
-
-Route::get('/settings', function () {
-    return view('auth.settings');
-}) -> name('auth.settings');
-
-Route::get('/list', [IndexController::class, 'index'])
+Route::get('/', [WorkController::class, 'index'])
     -> name('index');
 
-Route::get('/work/{work}', [WorkController::class, 'work'])
-    -> name('work');
+Route::get('/works/{work}', [WorkController::class, 'show'])
+    -> name('works.show');
 
-Route::get('/feature/{feature}', [FeatureController::class, 'feature'])
-    -> name('feature');
+Route::get('/features/{feature}/', [FeatureController::class, 'show'])
+    -> name('features.show');
 

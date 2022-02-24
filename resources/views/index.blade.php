@@ -9,7 +9,7 @@
         <div class="work-item border border-2 border-primary rounded mb-5 p-3 shadow">
             <div class="work-title mb-2">
                 <h2>
-                    <a href="{{ route('work', $work) }}" class="text-decoration-none">{{ $work->name }}</a>
+                    <a href="{{ route('works.show', $work) }}" class="text-decoration-none">{{ $work->name }}</a>
                 </h2>
                 <p>コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント</p>
             </div>

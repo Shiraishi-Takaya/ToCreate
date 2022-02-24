@@ -47,7 +47,7 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBasic">
                         <div class="accordion-body">
-                            <form>
+                            <form method="post" action="">
                                 <div class="task-form-title mb-3">
                                     <label class="mb-1" for="title">タスク名</label>
                                     <input type="text" class="form-control" id="title" placeholder="30文字以内で入力してください" required>

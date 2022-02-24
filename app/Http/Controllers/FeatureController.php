@@ -7,10 +7,14 @@ use Illuminate\Http\Request;
 
 class FeatureController extends Controller
 {
-    public function feature(Feature $feature)
+    public function show(Feature $feature)
     {
         return view('feature')
             -> with(['feature' => $feature]);
     }
 
+    public function create()
+    {
+
+    }
 }

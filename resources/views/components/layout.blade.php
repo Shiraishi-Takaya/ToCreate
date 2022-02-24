@@ -17,11 +17,6 @@
             <li class="nav-item">
                 <a class="nav-link fs-5">ToCreateとは</a>
             </li>
-            <li class="nav-item">
-                <a href="{{ route('auth.signup') }}" class="nav-link">
-                    <button class="btn btn-outline-primary fs-5">アカウント登録</button>
-                </a>
-            </li>
         </ul>
     </header>
 
