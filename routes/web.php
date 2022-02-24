@@ -36,3 +36,4 @@ Route::get('/work/{work}', [WorkController::class, 'work'])
 Route::get('/function', function () {
     return view('function');
 }) -> name('function');
+
