@@ -33,7 +33,7 @@ Route::get('/list', [IndexController::class, 'index'])
 Route::get('/work/{work}', [WorkController::class, 'work'])
     -> name('work');
 
-Route::get('/function', function () {
-    return view('function');
-}) -> name('function');
+Route::get('/feature/{feature}', function () {
+    return view('feature');
+}) -> name('feature');
 
