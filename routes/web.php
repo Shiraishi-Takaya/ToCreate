@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,7 @@ Route::get('/works/{work}', [WorkController::class, 'show'])
 
 Route::get('/features/{feature}/', [FeatureController::class, 'show'])
     -> name('features.show');
+
+Route::post('/features/{feature}/tasks', [TaskController::class, 'add'])
+    -> name('tasks.add');
 

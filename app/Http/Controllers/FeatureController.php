@@ -12,9 +12,4 @@ class FeatureController extends Controller
         return view('feature')
             -> with(['feature' => $feature]);
     }
-
-    public function create()
-    {
-
-    }
 }
