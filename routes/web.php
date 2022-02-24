@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\WorkController;
+use App\Http\Controllers\FeatureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,6 @@ Route::get('/list', [IndexController::class, 'index'])
 Route::get('/work/{work}', [WorkController::class, 'work'])
     -> name('work');
 
-Route::get('/feature/{feature}', function () {
-    return view('feature');
-}) -> name('feature');
+Route::get('/feature/{feature}', [FeatureController::class, 'feature'])
+    -> name('feature');
 

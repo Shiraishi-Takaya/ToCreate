@@ -6,3 +6,7 @@
 .features-container {
     max-width: 800px;
 }
+
+.features-item-link {
+    text-decoration: none;
+}

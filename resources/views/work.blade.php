@@ -23,7 +23,7 @@
             @foreach ($work->features as $feature)
             <div class="features-item d-flex justify-content-between border border-2 border-primary rounded mb-5 px-4 py-3 shadow">
                 <h4>
-                    <a href="{{ route('feature', $feature) }}">
+                    <a href="{{ route('feature', $feature) }}" class="features-item-link">
                         {{ $feature->name }}
                     </a>
                 </h4>
