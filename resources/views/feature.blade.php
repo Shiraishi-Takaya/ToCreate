@@ -18,8 +18,7 @@
         </div>
 
         <div class="tasks-container">
-
-            <ul class="list-group scroll-area-sm mb-4">
+            <ul class="list-group mb-4">
                 @foreach ($feature->tasks as $task)
                 <li class="task-item list-group-item d-flex align-items-center">
                     <input class="form-check-input me-3" type="checkbox">
@@ -85,17 +84,8 @@
             </div>
         </div>
 
-        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title text-primary" id="exampleModalLabel">(機能名)</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
-                    </div>
-
-
-                </div>
-            </div>
+        <div class="back text-center mt-5">
+            <a href="{{ route('works.show', $feature->work) }}" class="btn btn-outline-primary fs-5">&laquo;&nbsp;戻る</a>
         </div>
 
     </section>

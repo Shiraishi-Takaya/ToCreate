@@ -49,6 +49,10 @@
             </div>
         </div>
 
+        <div class="back text-center mt-5">
+            <a href="{{ route('index') }}" class="btn btn-outline-primary fs-5">&laquo;&nbsp;戻る</a>
+        </div>
+
     </section>
 
     <x-slot name="script">{{ url('js/app.js') }}</x-slot>
