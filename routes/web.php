@@ -23,8 +23,11 @@ Route::get('/', [WorkController::class, 'index'])
 Route::get('/works/{work}', [WorkController::class, 'show'])
     -> name('works.show');
 
-Route::get('/features/{feature}/', [FeatureController::class, 'show'])
+Route::get('/features/{feature}', [FeatureController::class, 'show'])
     -> name('features.show');
+
+Route::delete('/features/{feature}/destroy', [FeatureController::class, 'destroy'])
+    -> name('features.destroy');
 
 Route::post('/features/{feature}/tasks', [TaskController::class, 'add'])
     -> name('tasks.add');

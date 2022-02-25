@@ -5,7 +5,6 @@
     <section class="container">
 
         @foreach ($works as $work)
-
         <div class="work-item border border-2 border-primary rounded mb-5 p-3 shadow">
             <div class="work-title mb-2">
                 <h2>
@@ -49,7 +48,6 @@
                 </details>
             </div>
         </div>
-
         @endforeach
 
         <div class="work-add">

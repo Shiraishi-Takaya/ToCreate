@@ -9,7 +9,11 @@
                 <h1 class="text-primary">{{ $feature->name }}</h1>
                 <div class="feature-title-btn">
                     <button class="btn btn-outline-primary">編集</button>
-                    <button class="btn btn-outline-danger ms-2">削除</button>
+                    <form method="post" action="{{ route('features.destroy', $feature) }}">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-outline-danger ms-2">削除</button>
+                    </form>
                 </div>
             </div>
             <div class="feature-comment">

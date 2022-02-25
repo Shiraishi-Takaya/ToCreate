@@ -12,4 +12,12 @@ class FeatureController extends Controller
         return view('feature')
             -> with(['feature' => $feature]);
     }
+
+    public function destroy(Feature $feature)
+    {
+        $feature->delete();
+
+        return redirect()
+            -> route('works.show', $feature->work);
+    }
 }
