@@ -29,6 +29,9 @@ Route::delete('/works/{work}/destroy', [WorkController::class, 'destroy'])
 Route::get('/features/{feature}', [FeatureController::class, 'show'])
     -> name('features.show');
 
+Route::post('/works/{work}/features', [FeatureController::class, 'add'])
+    -> name('features.add');
+
 Route::delete('/features/{feature}/destroy', [FeatureController::class, 'destroy'])
     -> name('features.destroy');
 

@@ -16,8 +16,8 @@
                     </form>
                 </div>
             </div>
-            <div class="feature-comment">
-                コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
+            <div class="feature-comment mb-3">
+                {!! nl2br(e($feature->comment)) !!}
             </div>
         </div>
 
