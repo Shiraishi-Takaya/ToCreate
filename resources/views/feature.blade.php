@@ -21,20 +21,24 @@
 
             <ul class="list-group scroll-area-sm mb-4">
                 @foreach ($feature->tasks as $task)
-                    <li class="task-item list-group-item d-flex align-items-center">
-                        <input class="form-check-input me-3" type="checkbox">
-                        <div class="task-item-content">
-                            <div class="task-name fs-5">{{ $task->name }}</div>
-                            <div class="task-infos">
-                                <span class="task-type badge bg-warning">学習</span>
-                                <span class="task-deadline badge bg-primary">{{ $task->deadline }}</span>
-                            </div>
+                <li class="task-item list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox">
+                    <div class="task-item-content">
+                        <div class="task-name fs-5">{{ $task->name }}</div>
+                        <div class="task-infos">
+                            @if ($task->type)
+                            <span class="task-type badge bg-warning">学習</span>
+                            @else
+                            <span class="task-type badge bg-success">実装</span>
+                            @endif
+                            <span class="task-deadline badge bg-primary">{{ $task->deadline }}</span>
                         </div>
-                        <div class="list-item-btns ms-auto">
-                            <button class="btn btn-outline-primary me-2">編集</button>
-                            <button class="btn btn-outline-danger">削除</button>
-                        </div>
-                    </li>
+                    </div>
+                    <div class="list-item-btns ms-auto">
+                        <button class="btn btn-outline-primary me-2">編集</button>
+                        <button class="btn btn-outline-danger">削除</button>
+                    </div>
+                </li>
                 @endforeach
             </ul>
 
