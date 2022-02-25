@@ -45,6 +45,14 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <div class="work-delete text-end">
+                        <form method="post" action="{{ route('works.destroy', $work) }}">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn btn-outline-danger">削除</button>
+                        </form>
+                    </div>
                 </details>
             </div>
         </div>

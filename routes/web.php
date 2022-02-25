@@ -23,6 +23,9 @@ Route::get('/', [WorkController::class, 'index'])
 Route::get('/works/{work}', [WorkController::class, 'show'])
     -> name('works.show');
 
+Route::delete('/works/{work}/destroy', [WorkController::class, 'destroy'])
+    -> name('works.destroy');
+
 Route::get('/features/{feature}', [FeatureController::class, 'show'])
     -> name('features.show');
 

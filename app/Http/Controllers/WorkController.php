@@ -20,4 +20,12 @@ class WorkController extends Controller
         return view('work')
             -> with(['work' => $work]);
     }
+
+    public function destroy(Work $work)
+    {
+        $work->delete();
+
+        return redirect()
+            -> route('index');
+    }
 }
