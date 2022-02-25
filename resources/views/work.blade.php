@@ -44,8 +44,33 @@
             </div>
             @endforeach
 
-            <div class="features-add">
-                <button class="btn btn-lg btn-primary col-12">機能を追加する&nbsp;＋</button>
+            <div class="accordion task-form" id="accordionBasic">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            タスクを作成する
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBasic">
+                        <div class="accordion-body">
+                            <form method="post">
+                                @csrf
+                                <div class="feature-form-title mb-3">
+                                    <label class="mb-1" for="title">機能</label>
+                                    <input type="text" name="name" class="form-control" id="title" required>
+                                    <div class="invalid-feedback">
+                                        入力必須です。
+                                    </div>
+                                </div>
+                                <div class="feature-form-comment mb-4">
+                                    <label class="mb-1" for="comment">コメント</label>
+                                    <textarea name="comment" class="form-control" id="comment"></textarea>
+                                </div>
+                                <button class="btn btn-outline-primary col-12">作成</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -62,7 +62,7 @@
                                 @csrf
                                 <div class="task-form-title mb-3">
                                     <label class="mb-1" for="title">タスク名</label>
-                                    <input type="text" name="name" class="form-control" id="title" placeholder="30文字以内で入力してください" required>
+                                    <input type="text" name="name" class="form-control" id="title" required>
                                     <div class="invalid-feedback">
                                         入力必須です。
                                     </div>
