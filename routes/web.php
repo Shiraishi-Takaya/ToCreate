@@ -29,3 +29,6 @@ Route::get('/features/{feature}/', [FeatureController::class, 'show'])
 Route::post('/features/{feature}/tasks', [TaskController::class, 'add'])
     -> name('tasks.add');
 
+Route::delete('/tasks/{task}/destroy', [TaskController::class, 'destroy'])
+    -> name('tasks.destroy');
+
