@@ -23,26 +23,22 @@
                         <thead class="text-primary">
                             <tr>
                                 <th class="col-7 fw-normal">機能</th>
-                                <th class="col-3 fw-normal">未完了のタスク</th>
+                                <th class="col-3 fw-normal">完了したタスク</th>
                                 <th class="col-2 fw-normal">実装済み</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($work->features as $feature)
                             <tr>
-                                <td>(機能名)</td>
-                                <td>4&nbsp;/&nbsp;5</td>
-                                <td></td>
+                                <td>{{ $feature->name }}</td>
+                                <td>{{ count($feature->tasks->where('is_done', true)) }}&nbsp;/&nbsp;{{ count($feature->tasks) }}</td>
+                                <td>
+                                    @if ($feature->is_done)
+                                    <img src="{{ url('img/feature_done.png') }}" width="20px">
+                                    @endif
+                                </td>
                             </tr>
-                            <tr>
-                                <td>(機能名)</td>
-                                <td>1&nbsp;/&nbsp;3</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>(機能名)</td>
-                                <td>0&nbsp;/&nbsp;2</td>
-                                <td></td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
 

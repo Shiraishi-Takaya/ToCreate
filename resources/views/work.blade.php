@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="features-item-bottom">
-                    <p>{{ $feature->comment }}</p>
+                    <p>{!! nl2br(e($feature->comment)) !!}</p>
                 </div>
             </div>
             @endforeach
