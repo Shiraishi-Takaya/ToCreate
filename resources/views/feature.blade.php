@@ -25,9 +25,11 @@
             <ul class="list-group mb-4">
                 @foreach ($feature->tasks as $task)
                 <li class="task-item list-group-item d-flex align-items-center">
-                    <form method="post" >
+                    <form method="post">
                         @csrf
-                        <input class="form-check-input me-3" type="checkbox">
+                        <button type="submit" class="done-btn">
+                            <img src="{{ url('img/undone.jpg') }}" width="32px">
+                        </button>
                     </form>
                     <div class="task-item-content">
                         <div class="task-name fs-5">{{ $task->name }}</div>
