@@ -23,8 +23,8 @@ Route::get('/', [WorkController::class, 'index'])
 Route::get('/works/{work}', [WorkController::class, 'show'])
     -> name('works.show');
 
-// Route::post('/works/add', [WorkController::class, 'add'])
-//     -> name('works.add');
+Route::post('/works/add', [WorkController::class, 'add'])
+    -> name('works.add');
 
 Route::delete('/works/{work}/destroy', [WorkController::class, 'destroy'])
     -> name('works.destroy');

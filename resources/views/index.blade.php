@@ -10,7 +10,7 @@
                 <h2>
                     <a href="{{ route('works.show', $work) }}" class="text-decoration-none">{{ $work->name }}</a>
                 </h2>
-                <p>コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント</p>
+                <p>{!! nl2br(e($work->comment)) !!}</p>
             </div>
 
             <div class="work-detail">
