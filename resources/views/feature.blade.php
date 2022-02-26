@@ -13,9 +13,9 @@
                         @csrf
                         <button type="submit" class="done-btn">
                             @if ($feature->is_done)
-                            <img src="{{ url('img/done.jpeg') }}" width="36px">
+                            <img src="{{ url('img/done.png') }}" width="36px">
                             @else
-                            <img src="{{ url('img/undone.jpg') }}" width="36px">
+                            <img src="{{ url('img/undone.png') }}" width="36px">
                             @endif
                         </button>
                     </form>
@@ -40,9 +40,9 @@
                         @csrf
                         <button type="submit" class="done-btn">
                             @if ($task->is_done)
-                            <img src="{{ url('img/done.jpeg') }}" width="32px">
+                            <img src="{{ url('img/done.png') }}" width="32px">
                             @else
-                            <img src="{{ url('img/undone.jpg') }}" width="32px">
+                            <img src="{{ url('img/undone.png') }}" width="32px">
                             @endif
                         </button>
                     </form>
