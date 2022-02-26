@@ -21,25 +21,22 @@
             <h4 class="text-primary">機能&nbsp;:&nbsp;</h4>
 
             @foreach ($work->features as $feature)
-            <div class="features-item d-flex justify-content-between border border-2 border-primary rounded mb-5 px-4 py-3 shadow">
-                <h4>
-                    <a href="{{ route('features.show', $feature) }}" class="features-item-link">
-                        {{ $feature->name }}
-                    </a>
-                </h4>
-                <div class="completed_tasks">
-                    <div class="mb-2">
-                        完了した学習タスク
+            <div class="features-item border border-2 border-primary rounded mb-5 px-4 pt-3 shadow">
+                <div class="features-item-top d-flex justify-content-between">
+                    <h4>
+                        <a href="{{ route('features.show', $feature) }}" class="features-item-link">
+                            {{ $feature->name }}
+                        </a>
+                    </h4>
+                    <div class="completed_tasks">
+                        完了したタスク
                         <span class="ms-3 h5 text-primary">
-                            2&nbsp;/&nbsp;3
+                            2&nbsp;/&nbsp;
                         </span>
                     </div>
-                    <div>
-                        完了した実装タスク
-                        <span class="ms-3 h5 text-primary">
-                            0&nbsp;/&nbsp;2
-                        </span>
-                    </div>
+                </div>
+                <div class="features-item-bottom">
+                    <p>{{ $feature->comment }}</p>
                 </div>
             </div>
             @endforeach
