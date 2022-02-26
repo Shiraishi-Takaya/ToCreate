@@ -15,6 +15,17 @@ class WorkController extends Controller
             -> with(['works' => $works]);
     }
 
+    // public function add(Request $request)
+    // {
+    //     $feature = new Work();
+    //     $feature->name = $request->name;
+    //     $feature->comment = $request->comment;
+    //     $feature->save();
+
+    //     return redirect()
+    //         -> route('index');
+    // }
+
     public function show(Work $work)
     {
         return view('work')

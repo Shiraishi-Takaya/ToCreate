@@ -15,7 +15,6 @@ class WorkFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::factory(),
             'name' => $this->faker->realText(10),
             'comment' => $this->faker->realText(20)
         ];

@@ -67,7 +67,7 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBasic">
                     <div class="accordion-body">
-                        <form method="post" action="{{ route('features.add', $work) }}">
+                        <form method="post" action="{{ route('works.add') }}">
                             @csrf
                             <div class="feature-form-title mb-3">
                                 <label class="mb-1" for="title">作品名</label>
