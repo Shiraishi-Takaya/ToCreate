@@ -7,8 +7,18 @@
         <div class="feature-title-container">
             <div class="feature-title d-flex justify-content-between mb-2">
                 <h1 class="text-primary">{{ $feature->name }}</h1>
-                <div class="feature-title-btn">
-                    <button class="btn btn-outline-primary">編集</button>
+                <div class="feature-title-btn d-flex">
+                    <form method="post" action="{{ route('features.done', $feature) }}">
+                        @method('PATCH')
+                        @csrf
+                        <button type="submit" class="done-btn">
+                            @if ($feature->is_done)
+                            <img src="{{ url('img/done.jpeg') }}" width="36px">
+                            @else
+                            <img src="{{ url('img/undone.jpg') }}" width="36px">
+                            @endif
+                        </button>
+                    </form>
                     <form method="post" action="{{ route('features.destroy', $feature) }}">
                         @method('DELETE')
                         @csrf

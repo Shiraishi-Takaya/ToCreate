@@ -34,4 +34,13 @@ class FeatureController extends Controller
         return redirect()
             -> route('works.show', $feature->work);
     }
+
+    public function done(Feature $feature)
+    {
+        $feature->is_done = !($feature->is_done);
+        $feature->save();
+
+        return redirect()
+            -> route('features.show', $feature);
+    }
 }

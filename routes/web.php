@@ -38,6 +38,9 @@ Route::post('/works/{work}/features', [FeatureController::class, 'add'])
 Route::delete('/features/{feature}/destroy', [FeatureController::class, 'destroy'])
     -> name('features.destroy');
 
+Route::patch('/features/{feature}/done', [FeatureController::class, 'done'])
+    -> name('features.done');
+
 Route::post('/features/{feature}/tasks', [TaskController::class, 'add'])
     -> name('tasks.add');
 
