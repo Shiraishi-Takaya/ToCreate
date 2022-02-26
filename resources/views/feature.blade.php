@@ -25,10 +25,15 @@
             <ul class="list-group mb-4">
                 @foreach ($feature->tasks as $task)
                 <li class="task-item list-group-item d-flex align-items-center">
-                    <form method="post">
+                    <form method="post" action="{{ route('tasks.done', $task) }}">
+                        @method('PATCH')
                         @csrf
                         <button type="submit" class="done-btn">
+                            @if ($task->is_done)
+                            <img src="{{ url('img/done.jpeg') }}" width="32px">
+                            @else
                             <img src="{{ url('img/undone.jpg') }}" width="32px">
+                            @endif
                         </button>
                     </form>
                     <div class="task-item-content">

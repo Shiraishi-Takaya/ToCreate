@@ -33,4 +33,13 @@ class TaskController extends Controller
         return redirect()
             -> route('features.show', $task->feature);
     }
+
+    public function done(Task $task)
+    {
+        $task->is_done = !($task->is_done);
+        $task->save();
+
+        return redirect()
+            -> route('features.show', $task->feature);
+    }
 }

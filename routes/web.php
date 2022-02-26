@@ -44,3 +44,6 @@ Route::post('/features/{feature}/tasks', [TaskController::class, 'add'])
 Route::delete('/tasks/{task}/destroy', [TaskController::class, 'destroy'])
     -> name('tasks.destroy');
 
+Route::patch('/tasks/{task}/done', [TaskController::class, 'done'])
+    -> name('tasks.done');
+
