@@ -23,15 +23,18 @@
             @foreach ($work->features as $feature)
             <div class="features-item border border-2 border-primary rounded mb-5 px-4 pt-3 shadow">
                 <div class="features-item-top d-flex justify-content-between">
-                    <h4>
-                        <a href="{{ route('features.show', $feature) }}" class="features-item-link">
+                    <div class="feature-name">
+                        <a href="{{ route('features.show', $feature) }}" class="features-item-link fs-4">
                             {{ $feature->name }}
                         </a>
-                    </h4>
+                        @if ($feature->is_done)
+                        <img src="{{ url('img/feature_done.png') }}" width="20px" class="ms-2 pb-2">
+                        @endif
+                    </div>
                     <div class="completed_tasks">
                         完了したタスク
                         <span class="ms-3 h5 text-primary">
-                            2&nbsp;/&nbsp;
+                            {{ count($feature->tasks->where('is_done', true)) }}&nbsp;/&nbsp;{{ count($feature->tasks) }}
                         </span>
                     </div>
                 </div>
