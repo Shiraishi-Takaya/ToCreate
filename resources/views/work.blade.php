@@ -8,8 +8,7 @@
             <div class="work-title d-flex justify-content-between mb-2">
                 <h1 class="text-primary">{{ $work->name }}</h1>
                 <div class="work-title-btn">
-                    <button class="btn btn-outline-primary">編集</button>
-                    <button class="btn btn-outline-danger ms-2">削除</button>
+                    <button class="btn btn-outline-danger">削除</button>
                 </div>
             </div>
             <div class="work-comment">

@@ -58,7 +58,6 @@
                         </div>
                     </div>
                     <div class="list-item-btns ms-auto">
-                        <button class="btn btn-outline-primary me-2">編集</button>
                         <form method="post" action="{{ route('tasks.destroy', $task) }}">
                             @method('DELETE')
                             @csrf
