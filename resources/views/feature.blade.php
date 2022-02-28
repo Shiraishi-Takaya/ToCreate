@@ -32,7 +32,7 @@
         </div>
 
         <div class="tasks-container">
-            <ul class="list-group mb-4">
+            <ul class="list-group mb-5">
                 @foreach ($feature->tasks as $task)
                 <li class="task-item list-group-item d-flex align-items-center">
                     <form method="post" action="{{ route('tasks.done', $task) }}">

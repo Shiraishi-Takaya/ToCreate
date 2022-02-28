@@ -2,7 +2,7 @@
     <x-slot name="title">ToCreate</x-slot>
     <x-slot name="style">{{ url('css/index.css') }}</x-slot>
 
-    <section class="container">
+    <section class="container my-5">
 
         @foreach ($works as $work)
         <div class="work-item border border-2 border-primary rounded mb-5 p-3 shadow">

@@ -1,3 +1,8 @@
+.feature-container {
+    max-width: 880px;
+    min-height: calc(100vh - 210px);
+}
+
 .task-form {
     max-width: 750px;
     margin: 0 auto;
